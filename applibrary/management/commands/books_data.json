@@ -1,0 +1,1591 @@
+[
+    {
+        "name": "Alice's Adventures in Wonderland",
+        "category": "Fantasy",
+        "published_date": 1865,
+        "authors": "Lewis Carroll",
+        "stock": 3
+    },
+    {
+        "name": "Treasure Island",
+        "category": "Fantasy",
+        "published_date": 1880,
+        "authors": "Robert Louis Stevenson",
+        "stock": 9
+    },
+    {
+        "name": "Gulliver's Travels",
+        "category": "Fantasy",
+        "published_date": 1726,
+        "authors": "Jonathan Swift",
+        "stock": 3
+    },
+    {
+        "name": "Through the Looking-Glass",
+        "category": "Fantasy",
+        "published_date": 1871,
+        "authors": "Lewis Carroll",
+        "stock": 4
+    },
+    {
+        "name": "The Wonderful Wizard of Oz",
+        "category": "Fantasy",
+        "published_date": 1900,
+        "authors": "L. Frank Baum",
+        "stock": 2
+    },
+    {
+        "name": "The Lost World",
+        "category": "Fantasy",
+        "published_date": 1900,
+        "authors": "Arthur Conan Doyle",
+        "stock": 5
+    },
+    {
+        "name": "A Midsummer Night's Dream",
+        "category": "Fantasy",
+        "published_date": 1600,
+        "authors": "William Shakespeare",
+        "stock": 9
+    },
+    {
+        "name": "The Prince",
+        "category": "Fantasy",
+        "published_date": 1515,
+        "authors": "Niccolò Machiavelli",
+        "stock": 5
+    },
+    {
+        "name": "Five Children and It",
+        "category": "Fantasy",
+        "published_date": 1905,
+        "authors": "Edith Nesbit",
+        "stock": 6
+    },
+    {
+        "name": "Alice's Adventures in Wonderland / Through the Looking Glass",
+        "category": "Fantasy",
+        "published_date": 1889,
+        "authors": "Lewis Carroll",
+        "stock": 3
+    },
+    {
+        "name": "Le avventure di Pinocchio",
+        "category": "Fantasy",
+        "published_date": 1883,
+        "authors": "Carlo Collodi",
+        "stock": 4
+    },
+    {
+        "name": "Nineteen Eighty-Four",
+        "category": "Fantasy",
+        "published_date": 1949,
+        "authors": "George Orwell",
+        "stock": 5
+    },
+    {
+        "name": "The Hobbit",
+        "category": "Fantasy",
+        "published_date": 1937,
+        "authors": "J.R.R. Tolkien",
+        "stock": 9
+    },
+    {
+        "name": "Peter Pan",
+        "category": "Fantasy",
+        "published_date": 1911,
+        "authors": "J. M. Barrie",
+        "stock": 6
+    },
+    {
+        "name": "The Story of the Amulet",
+        "category": "Fantasy",
+        "published_date": 1906,
+        "authors": "Edith Nesbit",
+        "stock": 5
+    },
+    {
+        "name": "Phantastes",
+        "category": "Fantasy",
+        "published_date": 1850,
+        "authors": "George MacDonald",
+        "stock": 9
+    },
+    {
+        "name": "The Marvelous Land of Oz",
+        "category": "Fantasy",
+        "published_date": 1904,
+        "authors": "L. Frank Baum",
+        "stock": 10
+    },
+    {
+        "name": "Ozma of Oz",
+        "category": "Fantasy",
+        "published_date": 1907,
+        "authors": "L. Frank Baum",
+        "stock": 9
+    },
+    {
+        "name": "Le petit prince",
+        "category": "Fantasy",
+        "published_date": 1943,
+        "authors": "Antoine de Saint-Exupéry",
+        "stock": 6
+    },
+    {
+        "name": "Dorothy and the Wizard in Oz",
+        "category": "Fantasy",
+        "published_date": 1908,
+        "authors": "L. Frank Baum",
+        "stock": 10
+    },
+    {
+        "name": "Harry Potter and the Philosopher's Stone",
+        "category": "Fantasy",
+        "published_date": 1997,
+        "authors": "J. K. Rowling",
+        "stock": 7
+    },
+    {
+        "name": "The Emerald City of Oz",
+        "category": "Fantasy",
+        "published_date": 1910,
+        "authors": "L. Frank Baum",
+        "stock": 10
+    },
+    {
+        "name": "The Road to Oz",
+        "category": "Fantasy",
+        "published_date": 1909,
+        "authors": "L. Frank Baum",
+        "stock": 10
+    },
+    {
+        "name": "The Enchanted Castle",
+        "category": "Fantasy",
+        "published_date": 1907,
+        "authors": "Edith Nesbit",
+        "stock": 8
+    },
+    {
+        "name": "The Lost Princess of Oz",
+        "category": "Fantasy",
+        "published_date": 1917,
+        "authors": "L. Frank Baum",
+        "stock": 4
+    },
+    {
+        "name": "Tik-Tok of Oz",
+        "category": "Fantasy",
+        "published_date": 1914,
+        "authors": "L. Frank Baum",
+        "stock": 5
+    },
+    {
+        "name": "Le Tour du Monde en Quatre-Vingts Jours",
+        "category": "Fantasy",
+        "published_date": 1873,
+        "authors": "Jules Verne",
+        "stock": 10
+    },
+    {
+        "name": "The Patchwork Girl of Oz",
+        "category": "Fantasy",
+        "published_date": 1913,
+        "authors": "L. Frank Baum",
+        "stock": 6
+    },
+    {
+        "name": "The Phoenix and the Carpet",
+        "category": "Fantasy",
+        "published_date": 1903,
+        "authors": "Edith Nesbit",
+        "stock": 8
+    },
+    {
+        "name": "The Sea Fairies",
+        "category": "Fantasy",
+        "published_date": 1911,
+        "authors": "L. Frank Baum",
+        "stock": 2
+    },
+    {
+        "name": "Frankenstein or The Modern Prometheus",
+        "category": "Science_fiction",
+        "published_date": 1818,
+        "authors": "Mary Wollstonecraft Shelley",
+        "stock": 3
+    },
+    {
+        "name": "The Time Machine",
+        "category": "Science_fiction",
+        "published_date": 1895,
+        "authors": "H. G. Wells",
+        "stock": 6
+    },
+    {
+        "name": "Dracula",
+        "category": "Science_fiction",
+        "published_date": 1897,
+        "authors": "Bram Stoker",
+        "stock": 4
+    },
+    {
+        "name": "The Iron Heel",
+        "category": "Science_fiction",
+        "published_date": 1907,
+        "authors": "Jack London",
+        "stock": 9
+    },
+    {
+        "name": "Flatland",
+        "category": "Science_fiction",
+        "published_date": 1884,
+        "authors": "Edwin Abbott Abbott",
+        "stock": 4
+    },
+    {
+        "name": "Brave New World",
+        "category": "Science_fiction",
+        "published_date": 1932,
+        "authors": "Aldous Huxley",
+        "stock": 6
+    },
+    {
+        "name": "The War of the Worlds",
+        "category": "Science_fiction",
+        "published_date": 1898,
+        "authors": "H.G. Wells",
+        "stock": 9
+    },
+    {
+        "name": "The Princess and Curdie",
+        "category": "Science_fiction",
+        "published_date": 1832,
+        "authors": "George MacDonald",
+        "stock": 6
+    },
+    {
+        "name": "The Invisible Man",
+        "category": "Science_fiction",
+        "published_date": 1897,
+        "authors": "H. G. Wells",
+        "stock": 6
+    },
+    {
+        "name": "The Strange Case of Dr. Jekyll and Mr. Hyde",
+        "category": "Science_fiction",
+        "published_date": 1875,
+        "authors": "Robert Louis Stevenson",
+        "stock": 2
+    },
+    {
+        "name": "The Poison Belt",
+        "category": "Science_fiction",
+        "published_date": 1913,
+        "authors": "Arthur Conan Doyle",
+        "stock": 8
+    },
+    {
+        "name": "Vingt mille lieues sous les mers",
+        "category": "Science_fiction",
+        "published_date": 1870,
+        "authors": "Jules Verne",
+        "stock": 5
+    },
+    {
+        "name": "The Secret Agent",
+        "category": "Science_fiction",
+        "published_date": 1907,
+        "authors": "Joseph Conrad",
+        "stock": 9
+    },
+    {
+        "name": "Fahrenheit 451",
+        "category": "Science_fiction",
+        "published_date": 1953,
+        "authors": "Ray Bradbury",
+        "stock": 6
+    },
+    {
+        "name": "The Island of Dr. Moreau",
+        "category": "Science_fiction",
+        "published_date": 1896,
+        "authors": "H. G. Wells",
+        "stock": 5
+    },
+    {
+        "name": "At The Earth's Core And Out Of Time's Abyss",
+        "category": "Science_fiction",
+        "published_date": 1914,
+        "authors": "Edgar Rice Burroughs",
+        "stock": 6
+    },
+    {
+        "name": "The warlord of Mars #3",
+        "category": "Science_fiction",
+        "published_date": 1919,
+        "authors": "Edgar Rice Burroughs",
+        "stock": 3
+    },
+    {
+        "name": "Thuvia, Maid of Mars",
+        "category": "Science_fiction",
+        "published_date": 1916,
+        "authors": "Edgar Rice Burroughs",
+        "stock": 5
+    },
+    {
+        "name": "A Princess of Mars",
+        "category": "Science_fiction",
+        "published_date": 1917,
+        "authors": "Edgar Rice Burroughs",
+        "stock": 2
+    },
+    {
+        "name": "The Napoleon of Notting Hill",
+        "category": "Science_fiction",
+        "published_date": 1904,
+        "authors": "Gilbert Keith Chesterton",
+        "stock": 3
+    },
+    {
+        "name": "Voyage au Centre de la Terre",
+        "category": "Science_fiction",
+        "published_date": 1867,
+        "authors": "Jules Verne",
+        "stock": 8
+    },
+    {
+        "name": "The wood beyond the world",
+        "category": "Science_fiction",
+        "published_date": 1894,
+        "authors": "William Morris",
+        "stock": 4
+    },
+    {
+        "name": "When the Sleeper Awakes",
+        "category": "Science_fiction",
+        "published_date": 1899,
+        "authors": "H.G. Wells",
+        "stock": 3
+    },
+    {
+        "name": "Мы",
+        "category": "Science_fiction",
+        "published_date": 1924,
+        "authors": "Евгений Иванович Замятин",
+        "stock": 8
+    },
+    {
+        "name": "De la terre à la lune",
+        "category": "Science_fiction",
+        "published_date": 1865,
+        "authors": "Jules Verne",
+        "stock": 4
+    },
+    {
+        "name": "The Handmaid's Tale",
+        "category": "Science_fiction",
+        "published_date": 1985,
+        "authors": "Margaret Atwood",
+        "stock": 10
+    },
+    {
+        "name": "Pride and Prejudice",
+        "category": "Romance",
+        "published_date": 1602,
+        "authors": "Jane Austen",
+        "stock": 3
+    },
+    {
+        "name": "Emma",
+        "category": "Romance",
+        "published_date": 1815,
+        "authors": "Jane Austen",
+        "stock": 4
+    },
+    {
+        "name": "Wuthering Heights",
+        "category": "Romance",
+        "published_date": 1847,
+        "authors": "Emily Brontë",
+        "stock": 8
+    },
+    {
+        "name": "Sense and Sensibility",
+        "category": "Romance",
+        "published_date": 1811,
+        "authors": "Jane Austen",
+        "stock": 5
+    },
+    {
+        "name": "Little Women",
+        "category": "Romance",
+        "published_date": 1848,
+        "authors": "Louisa May Alcott",
+        "stock": 8
+    },
+    {
+        "name": "Northanger Abbey",
+        "category": "Romance",
+        "published_date": 1818,
+        "authors": "Jane Austen",
+        "stock": 8
+    },
+    {
+        "name": "Ethan Frome",
+        "category": "Romance",
+        "published_date": 1910,
+        "authors": "Edith Wharton",
+        "stock": 6
+    },
+    {
+        "name": "Le Comte de Monte Cristo",
+        "category": "Romance",
+        "published_date": 1830,
+        "authors": "Alexandre Dumas",
+        "stock": 2
+    },
+    {
+        "name": "Uncle Tom's Cabin",
+        "category": "Romance",
+        "published_date": 1850,
+        "authors": "Harriet Beecher Stowe",
+        "stock": 5
+    },
+    {
+        "name": "Anna Karenina",
+        "category": "Romance",
+        "published_date": 1876,
+        "authors": "Лев Толстой",
+        "stock": 7
+    },
+    {
+        "name": "The Moonstone",
+        "category": "Romance",
+        "published_date": 1868,
+        "authors": "Wilkie Collins",
+        "stock": 10
+    },
+    {
+        "name": "Women in Love",
+        "category": "Romance",
+        "published_date": 1877,
+        "authors": "David Herbert Lawrence",
+        "stock": 3
+    },
+    {
+        "name": "This Side of Paradise",
+        "category": "Romance",
+        "published_date": 1920,
+        "authors": "F. Scott Fitzgerald",
+        "stock": 7
+    },
+    {
+        "name": "Heart of Darkness",
+        "category": "Romance",
+        "published_date": 1899,
+        "authors": "Joseph Conrad",
+        "stock": 3
+    },
+    {
+        "name": "Jude the Obscure",
+        "category": "Romance",
+        "published_date": 1895,
+        "authors": "Thomas Hardy",
+        "stock": 6
+    },
+    {
+        "name": "The Woodlanders",
+        "category": "Romance",
+        "published_date": 1800,
+        "authors": "Thomas Hardy",
+        "stock": 6
+    },
+    {
+        "name": "The pioneers",
+        "category": "Romance",
+        "published_date": 1800,
+        "authors": "James Fenimore Cooper",
+        "stock": 3
+    },
+    {
+        "name": "Under the Greenwood Tree or, The Mellstock quire",
+        "category": "Romance",
+        "published_date": 1872,
+        "authors": "Thomas Hardy",
+        "stock": 4
+    },
+    {
+        "name": "Cranford",
+        "category": "Romance",
+        "published_date": 1853,
+        "authors": "Elizabeth Cleghorn Gaskell",
+        "stock": 4
+    },
+    {
+        "name": "The Age of Innocence",
+        "category": "Romance",
+        "published_date": 1920,
+        "authors": "Edith Wharton",
+        "stock": 3
+    },
+    {
+        "name": "Framley Parsonage",
+        "category": "Romance",
+        "published_date": 1861,
+        "authors": "Anthony Trollope",
+        "stock": 4
+    },
+    {
+        "name": "Daisy Miller",
+        "category": "Romance",
+        "published_date": 1877,
+        "authors": "Henry James",
+        "stock": 10
+    },
+    {
+        "name": "कामसूत्र",
+        "category": "Romance",
+        "published_date": 1883,
+        "authors": "Mallanaga Vātsyāyana",
+        "stock": 4
+    },
+    {
+        "name": "Le rouge et le noir",
+        "category": "Romance",
+        "published_date": 1800,
+        "authors": "Stendhal",
+        "stock": 10
+    },
+    {
+        "name": "Far From the Madding Crowd",
+        "category": "Romance",
+        "published_date": 1874,
+        "authors": "Thomas Hardy",
+        "stock": 5
+    },
+    {
+        "name": "Washington Square",
+        "category": "Romance",
+        "published_date": 1880,
+        "authors": "Henry James",
+        "stock": 4
+    },
+    {
+        "name": "Poirot investigates",
+        "category": "Romance",
+        "published_date": 1924,
+        "authors": "Agatha Christie",
+        "stock": 9
+    },
+    {
+        "name": "The Return of the Native",
+        "category": "Romance",
+        "published_date": 1878,
+        "authors": "Thomas Hardy",
+        "stock": 8
+    },
+    {
+        "name": "A Room with a View",
+        "category": "Romance",
+        "published_date": 1908,
+        "authors": "Edward Morgan Forster",
+        "stock": 7
+    },
+    {
+        "name": "Nostromo",
+        "category": "Romance",
+        "published_date": 1900,
+        "authors": "Joseph Conrad",
+        "stock": 5
+    },
+    {
+        "name": "The Adventures of Sherlock Holmes [12 stories]",
+        "category": "Mystery",
+        "published_date": 1892,
+        "authors": "Arthur Conan Doyle",
+        "stock": 3
+    },
+    {
+        "name": "The Mysterious Affair at Styles",
+        "category": "Mystery",
+        "published_date": 1920,
+        "authors": "Agatha Christie",
+        "stock": 3
+    },
+    {
+        "name": "The Secret Adversary",
+        "category": "Mystery",
+        "published_date": 1922,
+        "authors": "Agatha Christie",
+        "stock": 9
+    },
+    {
+        "name": "His Last Bow [8 stories]",
+        "category": "Mystery",
+        "published_date": 1917,
+        "authors": "Arthur Conan Doyle",
+        "stock": 2
+    },
+    {
+        "name": "The mystery of Edwin Drood",
+        "category": "Mystery",
+        "published_date": 1870,
+        "authors": "Charles Dickens",
+        "stock": 5
+    },
+    {
+        "name": "The Riddle of the Sands",
+        "category": "Mystery",
+        "published_date": 1903,
+        "authors": "Erskine Childers",
+        "stock": 10
+    },
+    {
+        "name": "The Man Who Was Thursday",
+        "category": "Mystery",
+        "published_date": 1908,
+        "authors": "Gilbert Keith Chesterton",
+        "stock": 2
+    },
+    {
+        "name": "Преступление и наказание",
+        "category": "Mystery",
+        "published_date": 1866,
+        "authors": "Фёдор Михайлович Достоевский",
+        "stock": 9
+    },
+    {
+        "name": "Greenmantle",
+        "category": "Mystery",
+        "published_date": 1742,
+        "authors": "John Buchan",
+        "stock": 8
+    },
+    {
+        "name": "Prester John",
+        "category": "Mystery",
+        "published_date": 1910,
+        "authors": "John Buchan",
+        "stock": 9
+    },
+    {
+        "name": "Whose Body?",
+        "category": "Mystery",
+        "published_date": 1923,
+        "authors": "Dorothy L. Sayers",
+        "stock": 7
+    },
+    {
+        "name": "Basil",
+        "category": "Mystery",
+        "published_date": 1852,
+        "authors": "Wilkie Collins",
+        "stock": 4
+    },
+    {
+        "name": "Murder on the Links",
+        "category": "Mystery",
+        "published_date": 1923,
+        "authors": "Agatha Christie",
+        "stock": 2
+    },
+    {
+        "name": "Fifty Candles",
+        "category": "Mystery",
+        "published_date": 1926,
+        "authors": "Earl Derr Biggers",
+        "stock": 7
+    },
+    {
+        "name": "The Amateur Cracksman",
+        "category": "Mystery",
+        "published_date": 1899,
+        "authors": "E. W. Hornung",
+        "stock": 3
+    },
+    {
+        "name": "The Murder of Roger Ackroyd",
+        "category": "Mystery",
+        "published_date": 1926,
+        "authors": "Agatha Christie",
+        "stock": 10
+    },
+    {
+        "name": "The After House",
+        "category": "Mystery",
+        "published_date": 1914,
+        "authors": "Mary Roberts Rinehart",
+        "stock": 4
+    },
+    {
+        "name": "The Angel of Terror",
+        "category": "Mystery",
+        "published_date": 1923,
+        "authors": "Edgar Wallace",
+        "stock": 10
+    },
+    {
+        "name": "Murder on the Orient Express",
+        "category": "Mystery",
+        "published_date": 1933,
+        "authors": "Agatha Christie",
+        "stock": 10
+    },
+    {
+        "name": "The Da Vinci Code",
+        "category": "Mystery",
+        "published_date": 2003,
+        "authors": "Dan Brown",
+        "stock": 6
+    },
+    {
+        "name": "The Man in the Brown Suit",
+        "category": "Mystery",
+        "published_date": 1924,
+        "authors": "Agatha Christie",
+        "stock": 4
+    },
+    {
+        "name": "Tales of Terror and Mystery",
+        "category": "Mystery",
+        "published_date": 1963,
+        "authors": "Arthur Conan Doyle",
+        "stock": 7
+    },
+    {
+        "name": "The Law and the Lady",
+        "category": "Mystery",
+        "published_date": 1875,
+        "authors": "Wilkie Collins",
+        "stock": 2
+    },
+    {
+        "name": "Death on the Nile",
+        "category": "Mystery",
+        "published_date": 1937,
+        "authors": "Agatha Christie",
+        "stock": 6
+    },
+    {
+        "name": "R. Holmes & Co.",
+        "category": "Mystery",
+        "published_date": 1906,
+        "authors": "John Kendrick Bangs",
+        "stock": 3
+    },
+    {
+        "name": "L'affaire Lerouge",
+        "category": "Mystery",
+        "published_date": 1800,
+        "authors": "Émile Gaboriau",
+        "stock": 7
+    },
+    {
+        "name": "The daffodil murder",
+        "category": "Mystery",
+        "published_date": 1921,
+        "authors": "Edgar Wallace",
+        "stock": 7
+    },
+    {
+        "name": "Bible",
+        "category": "History",
+        "published_date": 1200,
+        "authors": "Bible",
+        "stock": 3
+    },
+    {
+        "name": "Adventures of Huckleberry Finn",
+        "category": "History",
+        "published_date": 1876,
+        "authors": "Mark Twain",
+        "stock": 9
+    },
+    {
+        "name": "The Picture of Dorian Gray",
+        "category": "History",
+        "published_date": 1890,
+        "authors": "Oscar Wilde",
+        "stock": 9
+    },
+    {
+        "name": "A Tale of Two Cities",
+        "category": "History",
+        "published_date": 1800,
+        "authors": "Charles Dickens",
+        "stock": 7
+    },
+    {
+        "name": "A Christmas Carol",
+        "category": "History",
+        "published_date": 1843,
+        "authors": "Charles Dickens",
+        "stock": 4
+    },
+    {
+        "name": "Oliver Twist",
+        "category": "History",
+        "published_date": 1838,
+        "authors": "Charles Dickens",
+        "stock": 8
+    },
+    {
+        "name": "The Call of the Wild",
+        "category": "History",
+        "published_date": 1903,
+        "authors": "Jack London",
+        "stock": 10
+    },
+    {
+        "name": "Great Expectations",
+        "category": "History",
+        "published_date": 1861,
+        "authors": "Charles Dickens",
+        "stock": 5
+    },
+    {
+        "name": "Don Quixote",
+        "category": "History",
+        "published_date": 1600,
+        "authors": "Miguel de Cervantes Saavedra",
+        "stock": 10
+    },
+    {
+        "name": "Les trois mousquetaires",
+        "category": "History",
+        "published_date": 1844,
+        "authors": "Alexandre Dumas",
+        "stock": 3
+    },
+    {
+        "name": "Candide",
+        "category": "History",
+        "published_date": 1746,
+        "authors": "Voltaire",
+        "stock": 8
+    },
+    {
+        "name": "Romeo and Juliet",
+        "category": "History",
+        "published_date": 1597,
+        "authors": "William Shakespeare",
+        "stock": 5
+    },
+    {
+        "name": "Macbeth",
+        "category": "History",
+        "published_date": 1508,
+        "authors": "William Shakespeare",
+        "stock": 3
+    },
+    {
+        "name": "The Adventures of Tom Sawyer",
+        "category": "History",
+        "published_date": 1817,
+        "authors": "Mark Twain",
+        "stock": 10
+    },
+    {
+        "name": "The Last of the Mohicans",
+        "category": "History",
+        "published_date": 1826,
+        "authors": "James Fenimore Cooper",
+        "stock": 6
+    },
+    {
+        "name": "The Scarlet Letter",
+        "category": "History",
+        "published_date": 1850,
+        "authors": "Nathaniel Hawthorne",
+        "stock": 2
+    },
+    {
+        "name": "πολιτεία",
+        "category": "History",
+        "published_date": 1554,
+        "authors": "Πλάτων",
+        "stock": 7
+    },
+    {
+        "name": "A Connecticut Yankee in King Arthur's Court",
+        "category": "History",
+        "published_date": 1889,
+        "authors": "Mark Twain",
+        "stock": 6
+    },
+    {
+        "name": "Jane Eyre",
+        "category": "History",
+        "published_date": 1847,
+        "authors": "Charlotte Brontë",
+        "stock": 5
+    },
+    {
+        "name": "The Merchant of Venice",
+        "category": "History",
+        "published_date": 1600,
+        "authors": "William Shakespeare",
+        "stock": 5
+    },
+    {
+        "name": "Madame Bovary",
+        "category": "History",
+        "published_date": 1857,
+        "authors": "Gustave Flaubert",
+        "stock": 3
+    },
+    {
+        "name": "The Secret Garden",
+        "category": "History",
+        "published_date": 1911,
+        "authors": "Frances Hodgson Burnett",
+        "stock": 8
+    },
+    {
+        "name": "Carmilla",
+        "category": "Horror",
+        "published_date": 1871,
+        "authors": "Joseph Sheridan Le Fanu",
+        "stock": 6
+    },
+    {
+        "name": "The Great God Pan",
+        "category": "Horror",
+        "published_date": 1894,
+        "authors": "Arthur Machen",
+        "stock": 10
+    },
+    {
+        "name": "Brood of the Witch-Queen",
+        "category": "Horror",
+        "published_date": 1924,
+        "authors": "Sax Rohmer",
+        "stock": 8
+    },
+    {
+        "name": "The Damned",
+        "category": "Horror",
+        "published_date": 2002,
+        "authors": "Algernon Blackwood",
+        "stock": 6
+    },
+    {
+        "name": "Carrie",
+        "category": "Horror",
+        "published_date": 1974,
+        "authors": "Stephen King",
+        "stock": 9
+    },
+    {
+        "name": "Herland",
+        "category": "Horror",
+        "published_date": 1915,
+        "authors": "Charlotte Perkins Gilman",
+        "stock": 6
+    },
+    {
+        "name": "Misery",
+        "category": "Horror",
+        "published_date": 1978,
+        "authors": "Stephen King",
+        "stock": 3
+    },
+    {
+        "name": "The Shining",
+        "category": "Horror",
+        "published_date": 1977,
+        "authors": "Stephen King",
+        "stock": 4
+    },
+    {
+        "name": "It",
+        "category": "Horror",
+        "published_date": 1986,
+        "authors": "Stephen King",
+        "stock": 6
+    },
+    {
+        "name": "Skeleton Crew",
+        "category": "Horror",
+        "published_date": 1985,
+        "authors": "Stephen King",
+        "stock": 9
+    },
+    {
+        "name": "The Haunted and the Haunters, Or, The House and the Brain",
+        "category": "Horror",
+        "published_date": 1859,
+        "authors": "Edward Bulwer Lytton, Baron Lytton",
+        "stock": 4
+    },
+    {
+        "name": "The Exorcist",
+        "category": "Horror",
+        "published_date": 1971,
+        "authors": "William Peter Blatty",
+        "stock": 7
+    },
+    {
+        "name": "Pet Sematary",
+        "category": "Horror",
+        "published_date": 1983,
+        "authors": "Stephen King",
+        "stock": 7
+    },
+    {
+        "name": "The Gunslinger",
+        "category": "Horror",
+        "published_date": 1976,
+        "authors": "King, Stephen",
+        "stock": 5
+    },
+    {
+        "name": "Cujo",
+        "category": "Horror",
+        "published_date": 1981,
+        "authors": "Stephen King",
+        "stock": 3
+    },
+    {
+        "name": "The Green Mile",
+        "category": "Horror",
+        "published_date": 1996,
+        "authors": "Stephen King",
+        "stock": 2
+    },
+    {
+        "name": "The Dead Zone",
+        "category": "Horror",
+        "published_date": 1979,
+        "authors": "Stephen King",
+        "stock": 8
+    },
+    {
+        "name": "Firestarter",
+        "category": "Horror",
+        "published_date": 1980,
+        "authors": "Stephen King",
+        "stock": 2
+    },
+    {
+        "name": "The Stand",
+        "category": "Horror",
+        "published_date": 1978,
+        "authors": "Stephen King",
+        "stock": 4
+    },
+    {
+        "name": "The vampyre",
+        "category": "Horror",
+        "published_date": 1819,
+        "authors": "John William Polidori",
+        "stock": 8
+    },
+    {
+        "name": "Petals on the Wind",
+        "category": "Horror",
+        "published_date": 1600,
+        "authors": "V. C. Andrews",
+        "stock": 10
+    },
+    {
+        "name": "The Day of the Triffids",
+        "category": "Horror",
+        "published_date": 1951,
+        "authors": "John Wyndham",
+        "stock": 8
+    },
+    {
+        "name": "The Talisman",
+        "category": "Horror",
+        "published_date": 1984,
+        "authors": "Stephen King",
+        "stock": 6
+    },
+    {
+        "name": "Something Wicked This Way Comes",
+        "category": "Horror",
+        "published_date": 1962,
+        "authors": "Ray Bradbury",
+        "stock": 7
+    },
+    {
+        "name": "Different Seasons",
+        "category": "Horror",
+        "published_date": 1982,
+        "authors": "Stephen King",
+        "stock": 9
+    },
+    {
+        "name": "Julius Caesar",
+        "category": "Biography",
+        "published_date": 1684,
+        "authors": "William Shakespeare",
+        "stock": 3
+    },
+    {
+        "name": "Dubliners",
+        "category": "Biography",
+        "published_date": 1914,
+        "authors": "James Joyce",
+        "stock": 8
+    },
+    {
+        "name": "The Pilgrim's Progress",
+        "category": "Biography",
+        "published_date": 1678,
+        "authors": "John Bunyan",
+        "stock": 6
+    },
+    {
+        "name": "Narrative of the life of Frederick Douglass, an American slave",
+        "category": "Biography",
+        "published_date": 1845,
+        "authors": "Frederick Douglass",
+        "stock": 2
+    },
+    {
+        "name": "Sonnets",
+        "category": "Biography",
+        "published_date": 1609,
+        "authors": "William Shakespeare",
+        "stock": 5
+    },
+    {
+        "name": "Ab urbe condita",
+        "category": "Biography",
+        "published_date": 1481,
+        "authors": "Titus Livius",
+        "stock": 2
+    },
+    {
+        "name": "The Tenant of Wildfell Hall",
+        "category": "Biography",
+        "published_date": 1847,
+        "authors": "Anne Brontë",
+        "stock": 7
+    },
+    {
+        "name": "Leaves of Grass",
+        "category": "Biography",
+        "published_date": 1855,
+        "authors": "Walt Whitman",
+        "stock": 4
+    },
+    {
+        "name": "King Henry V",
+        "category": "Biography",
+        "published_date": 1600,
+        "authors": "William Shakespeare",
+        "stock": 5
+    },
+    {
+        "name": "Walden",
+        "category": "Biography",
+        "published_date": 1854,
+        "authors": "Henry David Thoreau",
+        "stock": 8
+    },
+    {
+        "name": "Manifest der Kommunistischen Partei",
+        "category": "Biography",
+        "published_date": 1848,
+        "authors": "Karl Marx",
+        "stock": 4
+    },
+    {
+        "name": "Confessions",
+        "category": "Biography",
+        "published_date": 1482,
+        "authors": "Augustine of Hippo",
+        "stock": 5
+    },
+    {
+        "name": "Roughing It",
+        "category": "Biography",
+        "published_date": 1872,
+        "authors": "Mark Twain",
+        "stock": 9
+    },
+    {
+        "name": "Paradise Lost",
+        "category": "Biography",
+        "published_date": 1667,
+        "authors": "John Milton",
+        "stock": 7
+    },
+    {
+        "name": "Autobiography",
+        "category": "Biography",
+        "published_date": 1791,
+        "authors": "Benjamin Franklin",
+        "stock": 9
+    },
+    {
+        "name": "Incidents in the life of a slave girl",
+        "category": "Biography",
+        "published_date": 1861,
+        "authors": "Harriet A. Jacobs",
+        "stock": 6
+    },
+    {
+        "name": "Les fleurs du mal",
+        "category": "Biography",
+        "published_date": 1855,
+        "authors": "Charles Baudelaire",
+        "stock": 3
+    },
+    {
+        "name": "Lord Jim",
+        "category": "Biography",
+        "published_date": 1900,
+        "authors": "Joseph Conrad",
+        "stock": 9
+    },
+    {
+        "name": "Lives",
+        "category": "Biography",
+        "published_date": 1564,
+        "authors": "Plutarch",
+        "stock": 4
+    },
+    {
+        "name": "Saint Francis of Assisi",
+        "category": "Biography",
+        "published_date": 1923,
+        "authors": "Gilbert Keith Chesterton",
+        "stock": 2
+    },
+    {
+        "name": "Twelve Years a Slave",
+        "category": "Biography",
+        "published_date": 1853,
+        "authors": "Solomon Northup",
+        "stock": 9
+    },
+    {
+        "name": "The life of Olaudah Equiano, or Gustavus Vassa, the African",
+        "category": "Biography",
+        "published_date": 1789,
+        "authors": "Olaudah Equiano",
+        "stock": 8
+    },
+    {
+        "name": "Sailing alone around the world",
+        "category": "Biography",
+        "published_date": 1800,
+        "authors": "Joshua Slocum",
+        "stock": 3
+    },
+    {
+        "name": "The complete poetical works",
+        "category": "Biography",
+        "published_date": 1786,
+        "authors": "Robert Burns",
+        "stock": 7
+    },
+    {
+        "name": "The Magician",
+        "category": "Biography",
+        "published_date": 1908,
+        "authors": "William Somerset Maugham",
+        "stock": 4
+    },
+    {
+        "name": "Tom Sawyer, Detective",
+        "category": "Biography",
+        "published_date": 1897,
+        "authors": "Mark Twain",
+        "stock": 4
+    },
+    {
+        "name": "Erewhon",
+        "category": "Biography",
+        "published_date": 1872,
+        "authors": "Samuel Butler",
+        "stock": 4
+    },
+    {
+        "name": "The Iliad of Homer",
+        "category": "Adventure",
+        "published_date": 1505,
+        "authors": "Όμηρος",
+        "stock": 8
+    },
+    {
+        "name": "The Prisoner of Zenda",
+        "category": "Adventure",
+        "published_date": 1800,
+        "authors": "Anthony Hope",
+        "stock": 6
+    },
+    {
+        "name": "The Scarlet Pimpernel",
+        "category": "Adventure",
+        "published_date": 1900,
+        "authors": "Emmuska Orczy, Baroness Orczy",
+        "stock": 6
+    },
+    {
+        "name": "Kidnapped",
+        "category": "Adventure",
+        "published_date": 1886,
+        "authors": "Robert Louis Stevenson",
+        "stock": 5
+    },
+    {
+        "name": "Harry Potter and the Chamber of Secrets",
+        "category": "Adventure",
+        "published_date": 1998,
+        "authors": "J. K. Rowling",
+        "stock": 6
+    },
+    {
+        "name": "Harry Potter and the Prisoner of Azkaban",
+        "category": "Adventure",
+        "published_date": 1999,
+        "authors": "J. K. Rowling",
+        "stock": 4
+    },
+    {
+        "name": "The Return of the King",
+        "category": "Adventure",
+        "published_date": 1950,
+        "authors": "J.R.R. Tolkien",
+        "stock": 5
+    },
+    {
+        "name": "Lord of Flies",
+        "category": "Adventure",
+        "published_date": 1954,
+        "authors": "William Golding",
+        "stock": 2
+    },
+    {
+        "name": "Northern Lights",
+        "category": "Adventure",
+        "published_date": 1995,
+        "authors": "Philip Pullman",
+        "stock": 6
+    },
+    {
+        "name": "The BFG",
+        "category": "Adventure",
+        "published_date": 1980,
+        "authors": "Roald Dahl",
+        "stock": 9
+    },
+    {
+        "name": "She",
+        "category": "Adventure",
+        "published_date": 1886,
+        "authors": "H. Rider Haggard",
+        "stock": 4
+    },
+    {
+        "name": "Lost Horizon",
+        "category": "Adventure",
+        "published_date": 1666,
+        "authors": "James Hilton",
+        "stock": 7
+    },
+    {
+        "name": "The Hitch Hiker's Guide to the Galaxy",
+        "category": "Adventure",
+        "published_date": 1979,
+        "authors": "Douglas Adams",
+        "stock": 9
+    },
+    {
+        "name": "Harry Potter and the Deathly Hallows",
+        "category": "Adventure",
+        "published_date": 2007,
+        "authors": "J. K. Rowling",
+        "stock": 8
+    },
+    {
+        "name": "Bulldog Drummond",
+        "category": "Adventure",
+        "published_date": 1919,
+        "authors": "Herman Cyril McNeile",
+        "stock": 8
+    },
+    {
+        "name": "The Bobbsey Twins",
+        "category": "Adventure",
+        "published_date": 1904,
+        "authors": "Laura Lee Hope",
+        "stock": 10
+    },
+    {
+        "name": "The nigger of the \"Narcissus\"",
+        "category": "Adventure",
+        "published_date": 1897,
+        "authors": "Joseph Conrad",
+        "stock": 4
+    },
+    {
+        "name": "The Boy in the Striped Pyjamas",
+        "category": "Adventure",
+        "published_date": 2006,
+        "authors": "John Boyne",
+        "stock": 5
+    },
+    {
+        "name": "The Magic Walking-Stick",
+        "category": "Adventure",
+        "published_date": 1932,
+        "authors": "John Buchan",
+        "stock": 6
+    },
+    {
+        "name": "Do Androids Dream of Electric Sheep?",
+        "category": "Adventure",
+        "published_date": 1968,
+        "authors": "Philip K. Dick",
+        "stock": 9
+    },
+    {
+        "name": "Five on a Treasure Island",
+        "category": "Adventure",
+        "published_date": 1942,
+        "authors": "Enid Blyton",
+        "stock": 8
+    },
+    {
+        "name": "The ghost",
+        "category": "Adventure",
+        "published_date": 1907,
+        "authors": "Arnold Bennett",
+        "stock": 5
+    },
+    {
+        "name": "Novels (The Call of the Wild / White Fang)",
+        "category": "Adventure",
+        "published_date": 1962,
+        "authors": "Jack London",
+        "stock": 9
+    },
+    {
+        "name": "The Seven Dials Mystery",
+        "category": "Adventure",
+        "published_date": 1929,
+        "authors": "Agatha Christie",
+        "stock": 9
+    },
+    {
+        "name": "David Copperfield",
+        "category": "Children",
+        "published_date": 1800,
+        "authors": "Charles Dickens",
+        "stock": 8
+    },
+    {
+        "name": "The Old Curiosity Shop",
+        "category": "Children",
+        "published_date": 1800,
+        "authors": "Charles Dickens",
+        "stock": 7
+    },
+    {
+        "name": "The Story of the Treasure Seekers being the adventures of the Bastable children in search of a fortune",
+        "category": "Children",
+        "published_date": 1899,
+        "authors": "Edith Nesbit",
+        "stock": 10
+    },
+    {
+        "name": "Little men",
+        "category": "Children",
+        "published_date": 1099,
+        "authors": "Louisa May Alcott",
+        "stock": 7
+    },
+    {
+        "name": "The Pathfinder",
+        "category": "Children",
+        "published_date": 1800,
+        "authors": "James Fenimore Cooper",
+        "stock": 2
+    },
+    {
+        "name": "Tom Sawyer Abroad",
+        "category": "Children",
+        "published_date": 1894,
+        "authors": "Mark Twain",
+        "stock": 7
+    },
+    {
+        "name": "What Katy Did",
+        "category": "Children",
+        "published_date": 1111,
+        "authors": "Susan Coolidge",
+        "stock": 9
+    },
+    {
+        "name": "Het Achterhuis",
+        "category": "Children",
+        "published_date": 1944,
+        "authors": "Anne Frank",
+        "stock": 5
+    },
+    {
+        "name": "[William Wheeler Hubbell, authorized to apply for patents.]",
+        "category": "Children",
+        "published_date": 1858,
+        "authors": "United States. Congress. Senate. Committee on Patents",
+        "stock": 2
+    },
+    {
+        "name": "Otto of the Silver Hand",
+        "category": "Children",
+        "published_date": 1888,
+        "authors": "Howard Pyle",
+        "stock": 4
+    },
+    {
+        "name": "Rainbow Valley",
+        "category": "Children",
+        "published_date": 1919,
+        "authors": "Lucy Maud Montgomery",
+        "stock": 3
+    },
+    {
+        "name": "Jack and Jill: a village story",
+        "category": "Children",
+        "published_date": 1000,
+        "authors": "Louisa May Alcott",
+        "stock": 5
+    },
+    {
+        "name": "Domestic medicine",
+        "category": "Children",
+        "published_date": 1769,
+        "authors": "William Buchan",
+        "stock": 3
+    },
+    {
+        "name": "Heidi",
+        "category": "Children",
+        "published_date": 1885,
+        "authors": "Johanna Spyri",
+        "stock": 7
+    },
+    {
+        "name": "Sylvie and Bruno",
+        "category": "Children",
+        "published_date": 1889,
+        "authors": "Lewis Carroll",
+        "stock": 4
+    },
+    {
+        "name": "The little white bird, or, Adventures in Kensington gardens",
+        "category": "Children",
+        "published_date": 1902,
+        "authors": "J. M. Barrie",
+        "stock": 9
+    }
+]

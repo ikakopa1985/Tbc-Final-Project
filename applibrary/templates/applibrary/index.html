@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div class="centralDiv">
+        <div>
+             <input type="text" id="paginKeyword" placeholder="pagin number" value="1" required><button class="filterItem" id="paginBut">Get All Books With Paginate</button>
+            <div class="">
+                <input type="text" id="bookId" placeholder="Book ID" required><button class="filterItem" id="sendRequestBtnBookItem">Get Book</button>
+                 <form id="addReserveForm">
+                        <input type="date" id="reserveDate" placeholder="Reserve Date" required>
+                        <input type="text" id="bookIdReserve" placeholder="Book ID" required>
+                        <button class="filterItem" type="submit">Add Reservation</button>
+                 </form>
+                        <input type="text" id="searchKeyword" placeholder="Search" required><button class="filterItem" id="searchBut">Search</button>
+                        <input type="text" id="categoryKeyword" placeholder="category filter" value="Fantasy" required><button class="filterItem" id="categoryBut">Filter category</button>
+                        <input type="text" id="authorKeyword" placeholder="author filter" value="L. Frank Baum" required><button class="filterItem" id="authorBut">Filter author</button>
+
+            </div>
+        </div>
+    <div style="width: 70%"  >
+        <p>response</p>
+        <textarea style="width:100%;height: 615px" id="responseApi"></textarea>
+    </div>
+    </div>
+
+{% endblock %}
+

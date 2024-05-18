@@ -1,0 +1,285 @@
+//get token
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        fetch('/api/token/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: username,
+                password: password
+            })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            localStorage.setItem('token', data.access);
+            document.getElementById('token').innerHTML = `Token: ${data.access}`;
+            fetch('/api/user-profile/', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${data.access}`
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(profileData => {
+                console.log('Authenticated!');
+                console.log('User Profile Data:', profileData);
+            })
+            .catch(error => {
+                console.error('There was a problem with your fetch operation:', error);
+            });
+        })
+        .catch(error => {
+            console.error('There was a problem with your fetch operation:', error);
+        });
+    });
+});
+
+
+//get book by id
+document.addEventListener("DOMContentLoaded", function () {
+    // Retrieve token from local storage
+    const token = localStorage.getItem('token');
+    if (!token) {
+        console.error('Token not found in local storage');
+        return;
+    }
+    document.getElementById("sendRequestBtnBookItem").addEventListener("click", function () {
+        // Make a GET request with saved token
+        let url ='/books/' + document.getElementById("bookId").value;
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Display response data
+            document.getElementById('responseApi').innerHTML = JSON.stringify(data);
+        })
+        .catch(error => {
+            console.error('There was a problem with your fetch operation:', error);
+        });
+    });
+});
+
+
+//reserve
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Retrieve token from local storage
+    const token = localStorage.getItem('token');
+    if (!token) {
+        console.error('Token not found in local storage');
+        return;
+    }
+
+    document.getElementById('addReserveForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const token = localStorage.getItem('token');
+                if (!token) {
+                    console.error('Token not found in local storage');
+                    return;
+                }
+                const reserveData = {
+                    reserve_date: document.getElementById('reserveDate').value,
+                    book: document.getElementById('bookIdReserve').value,
+                };
+
+                // Make a POST request to add a new reservation
+                fetch('/reserves/', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(reserveData)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Network response was not ok: ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById('responseApi').innerHTML = JSON.stringify(data);
+                })
+                .catch(error => {
+                    console.error('There was a problem with your fetch operation:', error);
+                });
+            });
+ });
+
+
+
+
+// search
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Retrieve token from local storage
+    const token = localStorage.getItem('token');
+    if (!token) {
+        console.error('Token not found in local storage');
+        return;
+    }
+
+    // Handle click event for the button
+    document.getElementById("searchBut").addEventListener("click", function () {
+        // Make a GET request with saved token
+        let url ='/books/?search=' + document.getElementById("searchKeyword").value;
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Display response data
+            document.getElementById('responseApi').innerHTML = JSON.stringify(data);
+        })
+        .catch(error => {
+            console.error('There was a problem with your fetch operation:', error);
+        });
+    });
+});
+
+
+
+
+// filter category
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Retrieve token from local storage
+    const token = localStorage.getItem('token');
+    if (!token) {
+        console.error('Token not found in local storage');
+        return;
+    }
+
+    // Handle click event for the button
+    document.getElementById("categoryBut").addEventListener("click", function () {
+        // Make a GET request with saved token
+        let url ='/books/?category__name=' + document.getElementById("categoryKeyword").value;
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Display response data
+            document.getElementById('responseApi').innerHTML = JSON.stringify(data);
+        })
+        .catch(error => {
+            console.error('There was a problem with your fetch operation:', error);
+        });
+    });
+});
+
+
+
+
+
+
+// filter author
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Retrieve token from local storage
+    const token = localStorage.getItem('token');
+    if (!token) {
+        console.error('Token not found in local storage');
+        return;
+    }
+
+    // Handle click event for the button
+    document.getElementById("authorBut").addEventListener("click", function () {
+        // Make a GET request with saved token
+        let url ='/books/?author__name=' + document.getElementById("authorKeyword").value;
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Display response data
+            document.getElementById('responseApi').innerHTML = JSON.stringify(data);
+        })
+        .catch(error => {
+            console.error('There was a problem with your fetch operation:', error);
+        });
+    });
+});
+
+
+
+// pagination
+
+document.addEventListener("DOMContentLoaded", function () {
+    const token = localStorage.getItem('token');
+    if (!token) {
+        console.error('Token not found in local storage');
+        return;
+    }
+
+    document.getElementById("paginBut").addEventListener("click", function () {
+        let url ='/books/?page=' + document.getElementById("paginKeyword").value;
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Display response data
+            document.getElementById('responseApi').innerHTML = JSON.stringify(data);
+        })
+        .catch(error => {
+            console.error('There was a problem with your fetch operation:', error);
+        });
+    });
+});
