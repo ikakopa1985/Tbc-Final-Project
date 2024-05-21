@@ -101,7 +101,7 @@ border: 1px solid white;
 
 .filterItem:hover{
   background-color: #ff7817;
-  transform: translateX(5px);
+  transform: translateY(5px);
 }
 
 .bookItemsAll{

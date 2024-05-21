@@ -4,24 +4,42 @@
 {% block content %}
     <div class="centralDiv">
         <div>
-             <input type="text" id="paginKeyword" placeholder="pagin number" value="1" required><button class="filterItem" id="paginBut">Get All Books With Paginate</button>
+             <div class="">
+                 <br>
+                  <h3>Get Books</h3>
+                    <input type="text" id="paginKeyword" placeholder="pagin number" value="1" required><button class="filterItem" id="paginBut">Get All Books With Paginate</button>
+                    <input type="text" id="bookId" placeholder="Book ID" value="685" required><button class="filterItem" id="sendRequestBtnBookItem">Get Book By Id</button>
+                   </div>
             <div class="">
-                <input type="text" id="bookId" placeholder="Book ID" required><button class="filterItem" id="sendRequestBtnBookItem">Get Book</button>
+                      <br>
+                  <h3>Reserve Book</h3>
                  <form id="addReserveForm">
-                        <input type="date" id="reserveDate" placeholder="Reserve Date" required>
-                        <input type="text" id="bookIdReserve" placeholder="Book ID" required>
+                        <input type="date" id="reserveDate"  placeholder="Reserve Date" required>
+                        <input type="text" id="bookIdReserve" value="690" placeholder="Book ID" required>
                         <button class="filterItem" type="submit">Add Reservation</button>
+                      <div class="">
+                      <br><br>
+                        <h3>Search And Filters</h3>
                  </form>
-                        <input type="text" id="searchKeyword" placeholder="Search" required><button class="filterItem" id="searchBut">Search</button>
+            </div>
+
+                        <input type="text" id="searchKeyword" placeholder="Search" value="Secret " required><button class="filterItem" id="searchBut">Search</button>
                         <input type="text" id="categoryKeyword" placeholder="category filter" value="Fantasy" required><button class="filterItem" id="categoryBut">Filter category</button>
                         <input type="text" id="authorKeyword" placeholder="author filter" value="L. Frank Baum" required><button class="filterItem" id="authorBut">Filter author</button>
+                <div class="">
+                    <br><br>
+                        <h3>Statistics</h3>
+                       <button class="filterItem" id="get10PopularBooksBut">Get 10 Popular Books</button>
+                </div>
 
             </div>
+             <div style="width: 70%"  >
+                <p>response</p>
+                <textarea style="width:1000px;height: 615px" id="responseApi"></textarea>
+            </div>
+
         </div>
-    <div style="width: 70%"  >
-        <p>response</p>
-        <textarea style="width:100%;height: 615px" id="responseApi"></textarea>
-    </div>
+
     </div>
 
 {% endblock %}

@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 from django.core.exceptions import ValidationError
+from datetime import date, timedelta
 from rest_framework import filters
 
 # Create your models here.
@@ -63,11 +64,10 @@ class Category(models.Model):
 
 
 class UserIdent(models.Model):
-    user = models.OneToOneField(User, on_delete=models.PROTECT)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=50, verbose_name=_('full name'))
     personal_number = models.CharField(max_length=50, verbose_name=_('peronal number'))
     birth_date = models.DateField(verbose_name="birth date")
-    is_staff = models.BooleanField()
 
     def __str__(self):
         return self.user.username
@@ -79,6 +79,15 @@ class Lease(models.Model):
     book = models.ForeignKey(Book, on_delete=models.PROTECT)
     must_receive_date = models.DateField(verbose_name=_("must_receive_date"), null=True)
     published = models.DateTimeField(auto_now_add=True, db_index=True, verbose_name="")
+
+    @property
+    def receive_date(self):
+        return Receive.objects.get(lease=self).receive_date
+
+    @property
+    def overdue(self):
+        result = str((self.receive_date - self.must_receive_date).days) + ' day'
+        return result
 
     def __str__(self):
         return f'user:{self.user.full_name} book:{self.book.name} ' \
@@ -119,12 +128,3 @@ class CancelReserve(models.Model):
 
     def __str__(self):
         return f'{self.reserve.book.name} {self.reserve.user.full_name} '
-
-#
-# class BookAnalyse(models.Model):
-#     book = models.ForeignKey(Book, on_delete=models.PROTECT)
-    # @property
-    # def book(self):
-    #     result = Book.objects.all()
-    #     return result
-

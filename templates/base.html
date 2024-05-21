@@ -28,16 +28,47 @@
     <div class="bodyDiv">
         <div class="leftDiv">
 
-            <div class="filterDivs" style="height: 600px"> <form id="loginForm">
+            <div class="filterDivs" style="padding-bottom: 60px"> <form id="loginForm">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" value="ika_kopa"><br><br>
+            <input type="text" id="username" name="username" value="user1"><br><br>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" value="User@123"><br><br>
-            <button type="submit">Login</button>
+            <input type="password" id="password" name="password" value="UserPass"><br><br>
+            <button  class="filterItem" type="submit">Login</button>
             </form>
             <textarea  id="token" style="height: 200px"></textarea>
              <div id="response"></div>
           </div>
+
+            <div class="">
+                 <h1>Create User</h1>
+                <form id="userIdentForm">
+                    <label for="username">Username:</label>
+                    <input type="text" id="usernameCreate" name="username" value="user1" required><br><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="passwordCreate" name="password" value="UserPass" required><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="ikakopa1985@gmail.com" required><br><br>
+
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" value=" firstname" required><br><br>
+
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" value=" lastname" required><br><br>
+
+                    <label for="full_name">Full Name:</label>
+                    <input type="text" id="full_name" name="full_name" value=" full name" required><br><br>
+
+                    <label for="personal_number">Personal Number:</label>
+                    <input type="text" id="personal_number" name="personal_number" value=" 2892829" required><br><br>
+
+                    <label for="birth_date">Birth Date:</label>
+                    <input type="date" id="birth_date" name="birth_date" required><br><br>
+
+                    <button class="filterItem" type="submit">Create UserIdent</button>
+                </form>
+            </div>
 
 
         </div>

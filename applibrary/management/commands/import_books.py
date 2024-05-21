@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 class Command(BaseCommand):
-    help = 'Fetches book data from a free API and adds it to the database'
+    help = 'import books from json'
 
     def handle(self, *args, **kwargs):
         CancelReserve.objects.all().delete()
@@ -24,10 +24,11 @@ class Command(BaseCommand):
         for book in books_data:
             category, _ = Category.objects.get_or_create(name=book['category'])
             author, _ = Author.objects.get_or_create(name=book['authors'])
-            book = Book.objects.create(
+            created_book = Book.objects.create(
                 name=book['name'],
-                author= author,
-                category= category,
+                author=author,
+                category=category,
                 book_published_date=int(book['published_date']),
                 stock=int(book['stock']),
             )
+            self.stdout.write(self.style.SUCCESS(f"Added book : {created_book}"))

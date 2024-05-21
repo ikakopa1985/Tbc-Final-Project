@@ -105,4 +105,58 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('responseApi').innerHTML = JSON.stringify(data);
             });
     });
+
+
+    //create user
+
+    document.getElementById('userIdentForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const userData = {
+            username: document.getElementById('usernameCreate').value,
+            password: document.getElementById('passwordCreate').value,
+            email: document.getElementById('email').value,
+            first_name: document.getElementById('firstname').value,
+            last_name: document.getElementById('lastname').value,
+        };
+        const userIdentData = {
+            full_name: document.getElementById('full_name').value,
+            personal_number: document.getElementById('personal_number').value,
+            birth_date: document.getElementById('birth_date').value,
+            user: userData,
+        };
+        try {
+            const response = await fetch('/users/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(userIdentData),
+            });
+            if (response.ok) {
+                const result = await response.json();
+                alert('UserIdent created successfully!');
+                console.log(result);
+            } else {
+                const error = await response.json();
+                alert('Error creating UserIdent: ' + JSON.stringify(error));
+                console.error('Error:', error);
+            }
+        } catch (error) {
+            alert('Network error: ' + error.message);
+            console.error('Network error:', error);
+        }
+    });
+
+
+     // Get book by ID
+    document.getElementById("get10PopularBooksBut").addEventListener("click", function () {
+        const bookId = document.getElementById("bookId").value;
+        apiRequest(`/get10PopularBooks`, 'GET')
+            .then(data => {
+                document.getElementById('responseApi').innerHTML = JSON.stringify(data);
+            });
+    });
+
 });
+
+

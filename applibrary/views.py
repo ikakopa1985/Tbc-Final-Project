@@ -6,6 +6,8 @@ from applibrary.serializers import *
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import filters
+from rest_framework.generics import ListCreateAPIView
+from django.db.models import Count
 
 # Create your views here.
 
@@ -38,3 +40,15 @@ class ReserveViewSet(viewsets.ModelViewSet):
 
 def index(request):
     return render(request, template_name='applibrary/index.html')
+
+
+class Get10PopularBooksView(ListCreateAPIView):
+    serializer_class = Get10PopularBookSerializer
+
+    def get_queryset(self):
+        queryset = (
+            Book.objects.annotate(lease_count=Count('lease'))
+            .order_by('-lease_count')[:10]
+        )
+        return queryset
+
