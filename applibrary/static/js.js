@@ -3,7 +3,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!token) {
         console.error('Token not found in local storage');
+        alert('please log in   and   then refresh page')
         return;
+    }
+    else{
+         apiRequest('/api/user-profile/', 'GET')
+            .then(profileData => {
+                console.log('Authenticated!');
+                console.log('User Profile Data:', profileData);
+                document.getElementById('token').innerHTML =
+                    document.getElementById('token').innerHTML +
+                    '            \n    '+
+                    'email=' + profileData['email'] +
+                    '            \n    '+
+                    'username= ' + profileData['username']
+            });
     }
 
     function apiRequest(url, method, data = null, tokenRequired = true) {
@@ -39,12 +53,20 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 localStorage.setItem('token', data.access);
                 document.getElementById('token').innerHTML = `Token: ${data.access}`;
+                // const token = data.access
                 return apiRequest('/api/user-profile/', 'GET');
             })
             .then(profileData => {
                 console.log('Authenticated!');
                 console.log('User Profile Data:', profileData);
+                document.getElementById('token').innerHTML =
+                    document.getElementById('token').innerHTML +
+                    '            \n    '+
+                    'email=' + profileData['email'] +
+                    '            \n    '+
+                    'username= ' + profileData['username']
             });
+         // window.location.reload();
     });
 
     // Get book by ID
@@ -177,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // get All Book Lease 1 Year
+    // get100UserMostOverdueBut
     document.getElementById("get100UserMostOverdueBut").addEventListener("click", function () {
         console.log('clicked')
         apiRequest(`/get100UserMostOverdue`, 'GET')
@@ -187,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // get All Book Lease 1 Year
+    // getSortedBooksBut
     document.getElementById("getSortedBooksBut").addEventListener("click", function () {
         console.log('clicked')
         apiRequest(`/getSortedBooks`, 'GET')
@@ -196,7 +218,21 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 
-});
 
+
+    // addWishBookBut
+      document.getElementById('addtowishlistform').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const wishlistData = {
+                book: document.getElementById('bookidinput').value,
+            };
+
+            apiRequest('/wishlist/', 'POST', wishlistData)
+                .then(data => {
+                    document.getElementById('responseApi').innerHTML = JSON.stringify(data);
+                });
+        });
+
+});
 
 

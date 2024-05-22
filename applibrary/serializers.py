@@ -26,6 +26,13 @@ class ReserveSerializer(ModelSerializer):
         read_only_fields = ['user']
 
 
+class WishlistSerializer(ModelSerializer):
+    class Meta:
+        model = Wishlist
+        fields = '__all__'
+        read_only_fields = ['user']
+
+
 class UserSerializer(ModelSerializer):
     class Meta:
         model = User

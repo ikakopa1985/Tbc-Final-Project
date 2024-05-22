@@ -10,7 +10,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework import filters
 from rest_framework.generics import ListCreateAPIView
 from django.db.models import Count
-from django.core.mail import EmailMessage
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 # Create your views here.
 
@@ -27,6 +28,19 @@ class BookViewSet(viewsets.ModelViewSet):
     pagination_class.page_size = 10
 
 
+class UserProfileView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        user = request.user
+        return Response({
+            'username': user.username,
+            'email': user.email,
+            'first_name': user.first_name,
+            'last_name': user.last_name,
+        })
+
+
 class UserIdentViewSet(viewsets.ModelViewSet):
     queryset = UserIdent.objects.all()
     serializer_class = UserIdentSerializer
@@ -35,6 +49,15 @@ class UserIdentViewSet(viewsets.ModelViewSet):
 class ReserveViewSet(viewsets.ModelViewSet):
     queryset = Reserve.objects.all()
     serializer_class = ReserveSerializer
+
+    def perform_create(self, serializer):
+        user_recognized = UserIdent.objects.get(user=self.request.user)
+        serializer.save(user=user_recognized)
+
+
+class WishlistViewSet(viewsets.ModelViewSet):
+    queryset = Wishlist.objects.all()
+    serializer_class = WishlistSerializer
 
     def perform_create(self, serializer):
         user_recognized = UserIdent.objects.get(user=self.request.user)
@@ -112,6 +135,11 @@ class Get100UserMostOverdue(ListCreateAPIView):
             ORDER BY -user_overdue_count
             LIMIT 100
         ''')
+
+
+
+
+
 
 
 class GetSortedBooks(ListCreateAPIView):

@@ -24,6 +24,7 @@ router = DefaultRouter()
 router.register(r'books', BookViewSet,  basename='BookViewSet'),
 router.register(r'users', UserIdentViewSet, basename='UserIdentViewSet'),
 router.register(r'reserves', ReserveViewSet, basename='ReserveViewSet'),
+router.register(r'wishlist', WishlistViewSet, basename='WishlistViewSet'),
 
 
 urlpatterns = [
@@ -39,9 +40,12 @@ urlpatterns = [
 
     path("getSortedBooks/", GetSortedBooks.as_view(), name='GetSortedBooks'),
 
+
     path("__debug__/", include("debug_toolbar.urls")),
 
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/user-profile/', UserProfileView.as_view(), name='user_profile'),
+
 
 ]

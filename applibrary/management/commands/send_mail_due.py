@@ -18,9 +18,7 @@ class Command(BaseCommand):
         join applibrary_userident au on applibrary_lease.user_id = au.id
         join auth_user a on au.user_id = a.id
         where (ar.id is null)
-          and Cast ((
-                    JulianDay(JulianDay(applibrary_lease.must_receive_date) - date('now'))
-                ) As Integer) > 1
+          and (overdueDay > 0)
                 ''')
 
         for item in queryset:
