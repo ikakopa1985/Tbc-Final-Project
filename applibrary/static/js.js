@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log('User Profile Data:', profileData);
                 document.getElementById('token').innerHTML =
                     document.getElementById('token').innerHTML +
+                    '           wellcome   '+
                     '            \n    '+
                     'email=' + profileData['email'] +
                     '            \n    '+

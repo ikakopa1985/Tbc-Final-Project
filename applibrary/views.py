@@ -135,11 +135,7 @@ class Get100UserMostOverdue(ListCreateAPIView):
             ORDER BY -user_overdue_count
             LIMIT 100
         ''')
-
-
-
-
-
+        return queryset
 
 
 class GetSortedBooks(ListCreateAPIView):

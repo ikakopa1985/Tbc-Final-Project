@@ -10,6 +10,7 @@ class Command(BaseCommand):
     help = 'import books from json'
 
     def handle(self, *args, **kwargs):
+        Wishlist.objects.all().delete()
         CancelReserve.objects.all().delete()
         Reserve.objects.all().delete()
         Receive.objects.all().delete()
