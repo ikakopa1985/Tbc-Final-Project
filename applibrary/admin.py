@@ -84,9 +84,11 @@ class UserIdentAdmin(admin.ModelAdmin):
 
 class ReceiveAdmin(admin.ModelAdmin):
     list_display = [field.name for field in Receive._meta.fields]
-    # autocomplete_fields = ['author', 'category']
-    # search_fields = ('user',)
     autocomplete_fields = ['lease']
+
+
+class WishlistAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in Wishlist._meta.fields]
 
 
 admin.site.register(Book, BookAdmin)
@@ -97,4 +99,4 @@ admin.site.register(Category, CategoryAdmin)
 admin.site.register(Author, AuthorAdmin)
 admin.site.register(UserIdent, UserIdentAdmin)
 admin.site.register(Receive, ReceiveAdmin)
-# admin.site.register(BookAnalyse, BookAnalyseAdmin)
+admin.site.register(Wishlist, WishlistAdmin)

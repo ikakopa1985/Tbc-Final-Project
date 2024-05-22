@@ -1,3 +1,5 @@
+from datetime import datetime
+from django.db.models.functions import ExtractYear
 from django.shortcuts import render
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.pagination import PageNumberPagination
@@ -8,6 +10,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework import filters
 from rest_framework.generics import ListCreateAPIView
 from django.db.models import Count
+from django.core.mail import EmailMessage
 
 # Create your views here.
 
@@ -51,4 +54,71 @@ class Get10PopularBooksView(ListCreateAPIView):
             .order_by('-lease_count')[:10]
         )
         return queryset
+
+
+class GetAllBookLease1Year(ListCreateAPIView):
+    serializer_class = GetAllBookLease1YearSerializer
+
+    def get_queryset(self):
+        current_year = datetime.now().year
+        queryset = (
+            Book.objects.annotate(
+                lease_count=Count('lease', filter=ExtractYear('lease__lease_date') == current_year)
+            ).order_by('-lease_count')
+        )
+        return queryset
+
+
+class Get100BookMostOverdue(ListCreateAPIView):
+    serializer_class = Get100BookMostOverdueSerializer
+
+    def get_queryset(self):
+        queryset = Book.objects.raw('''
+        select *,  Cast ((
+            JulianDay(applibrary_receive.receive_date) - JulianDay(al.must_receive_date)
+        ) As Integer) as overdueDay
+        from applibrary_receive
+        join applibrary_lease al on applibrary_receive.lease_id = al.id
+        join applibrary_book ab on ab.id = al.book_id
+        where Cast ((
+            JulianDay(applibrary_receive.receive_date) - JulianDay(al.must_receive_date)
+        ) As Integer) > 1
+        order by Cast ((
+            JulianDay(applibrary_receive.receive_date) - JulianDay(al.must_receive_date)
+        ) As Integer) 
+        LIMIT 100
+        ''')
+        return queryset
+
+
+class Get100UserMostOverdue(ListCreateAPIView):
+    serializer_class = Get100UserMostOverdueSerializer
+
+    def get_queryset(self):
+        queryset = Book.objects.raw('''
+            select *,  Cast ((
+                JulianDay(applibrary_receive.receive_date) - JulianDay(al.must_receive_date)
+            ) As Integer) as overdueDay, au.full_name
+             as full_name, a.username as username,  count(a.username) as user_overdue_count
+            from applibrary_receive
+            join applibrary_lease al on applibrary_receive.lease_id = al.id
+            join applibrary_book ab on ab.id = al.book_id
+            join applibrary_userident au on al.user_id = au.id
+            join auth_user a on au.user_id = a.id
+            where Cast ((
+                JulianDay(applibrary_receive.receive_date) - JulianDay(al.must_receive_date)
+            ) As Integer) > 1
+            GROUP BY a.username
+            ORDER BY -user_overdue_count
+            LIMIT 100
+        ''')
+
+
+class GetSortedBooks(ListCreateAPIView):
+    serializer_class = GetSortedBooksSerializer
+
+    def get_queryset(self):
+        most_leased_books = Book.objects.annotate(num_leases=Count('lease'))\
+            .filter(num_leases__gt=0).order_by('-num_leases')
+        return most_leased_books
 

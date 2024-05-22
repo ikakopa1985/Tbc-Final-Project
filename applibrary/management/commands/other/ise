@@ -1,0 +1,6 @@
+ where ar.id is null and Cast ((
+            JulianDay(date('now')) - JulianDay(applibrary_lease.must_receive_date)
+        ) As Integer) > 1
+
+
+au.full_name, a.email, ab.name

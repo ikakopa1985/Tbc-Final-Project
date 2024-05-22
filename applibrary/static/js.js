@@ -148,15 +148,55 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-     // Get book by ID
+     // Get get 10 Popular Books
     document.getElementById("get10PopularBooksBut").addEventListener("click", function () {
-        const bookId = document.getElementById("bookId").value;
         apiRequest(`/get10PopularBooks`, 'GET')
             .then(data => {
                 document.getElementById('responseApi').innerHTML = JSON.stringify(data);
             });
     });
 
+
+    // get All Book Lease 1 Year
+    document.getElementById("getAllBookLease1YearBut").addEventListener("click", function () {
+        console.log('clicked')
+        apiRequest(`/getAllBookLease1Year`, 'GET')
+            .then(data => {
+                document.getElementById('responseApi').innerHTML = JSON.stringify(data);
+            });
+    });
+
+
+    // get All Book Lease 1 Year
+    document.getElementById("get100BookMostOverdueBut").addEventListener("click", function () {
+        console.log('clicked')
+        apiRequest(`/get100BookMostOverdue`, 'GET')
+            .then(data => {
+                document.getElementById('responseApi').innerHTML = JSON.stringify(data);
+            });
+    });
+
+
+    // get All Book Lease 1 Year
+    document.getElementById("get100UserMostOverdueBut").addEventListener("click", function () {
+        console.log('clicked')
+        apiRequest(`/get100UserMostOverdue`, 'GET')
+            .then(data => {
+                document.getElementById('responseApi').innerHTML = JSON.stringify(data);
+            });
+    });
+
+
+    // get All Book Lease 1 Year
+    document.getElementById("getSortedBooksBut").addEventListener("click", function () {
+        console.log('clicked')
+        apiRequest(`/getSortedBooks`, 'GET')
+            .then(data => {
+                document.getElementById('responseApi').innerHTML = JSON.stringify(data);
+            });
+    });
+
 });
+
 
 

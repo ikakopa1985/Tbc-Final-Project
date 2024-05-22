@@ -1,8 +1,7 @@
 from applibrary.models import *
-from rest_framework.serializers import ModelSerializer, Serializer
+from rest_framework.serializers import ModelSerializer
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from rest_framework.views import APIView
 
 
 class BookSerializer(ModelSerializer):
@@ -57,6 +56,42 @@ class UserIdentSerializer(ModelSerializer):
 
 class Get10PopularBookSerializer(serializers.ModelSerializer):
     lease_count = serializers.IntegerField(read_only=True)
+
     class Meta:
         model = Book
         fields = ['id', 'name', 'author', 'category', 'book_published_date', 'stock', 'lease_count']
+
+
+class GetAllBookLease1YearSerializer(serializers.ModelSerializer):
+    lease_count = serializers.IntegerField(read_only=True)
+
+    class Meta:
+        model = Book
+        fields = ['id', 'name', 'author', 'category', 'book_published_date', 'stock', 'lease_count']
+
+
+class Get100BookMostOverdueSerializer(serializers.ModelSerializer):
+    overdueDay = serializers.IntegerField(read_only=True)
+
+    class Meta:
+        model = Book
+        fields = ['id', 'name', 'author', 'category', 'book_published_date', 'stock', 'overdueDay']
+
+
+class Get100UserMostOverdueSerializer(serializers.ModelSerializer):
+    overdueDay = serializers.IntegerField(read_only=True)
+    full_name = serializers.CharField(read_only=True)
+    username = serializers.CharField(read_only=True)
+    user_overdue_count = serializers.IntegerField(read_only=True)
+
+    class Meta:
+        model = Book
+        fields = ['id', 'name', 'author', 'category', 'book_published_date', 'stock', 'overdueDay', 'full_name',
+                  'username', 'user_overdue_count']
+
+
+class GetSortedBooksSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Book
+        fields = ['id', 'name', 'author', 'category', 'book_published_date', 'stock']
+

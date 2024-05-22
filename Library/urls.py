@@ -18,14 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from applibrary.views import *
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 router = DefaultRouter()
 router.register(r'books', BookViewSet,  basename='BookViewSet'),
 router.register(r'users', UserIdentViewSet, basename='UserIdentViewSet'),
 router.register(r'reserves', ReserveViewSet, basename='ReserveViewSet'),
-
-
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 
 urlpatterns = [
@@ -35,7 +33,13 @@ urlpatterns = [
     path("index/", index, name='index'),
 
     path("get10PopularBooks/", Get10PopularBooksView.as_view(), name='Get10PopularBooks'),
+    path("getAllBookLease1Year/", GetAllBookLease1Year.as_view(), name='GetAllBookLease1Year'),
+    path("get100BookMostOverdue/", Get100BookMostOverdue.as_view(), name='get100BookMostOverdue'),
+    path("get100UserMostOverdue/", Get100UserMostOverdue.as_view(), name='Get100UserMostOverdue'),
 
+    path("getSortedBooks/", GetSortedBooks.as_view(), name='GetSortedBooks'),
+
+    path("__debug__/", include("debug_toolbar.urls")),
 
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),

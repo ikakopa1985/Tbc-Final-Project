@@ -2,8 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 from django.core.exceptions import ValidationError
-from datetime import date, timedelta
-from rest_framework import filters
 
 # Create your models here.
 
@@ -90,12 +88,21 @@ class Lease(models.Model):
         return result
 
     def __str__(self):
-        return f'user:{self.user.full_name} book:{self.book.name} ' \
+        return f'id=:{self.id}, user:{self.user.full_name} book:{self.book.name} ' \
                f'leased:{self.lease_date} must_receive_date:{self.must_receive_date}'
 
     def clean(self):
         if self.book.in_stock < 1:
             raise ValidationError('Not In Stock')
+
+
+class Wishlist(models.Model):
+    user = models.ForeignKey(UserIdent, on_delete=models.PROTECT)
+    book = models.ForeignKey(Book, on_delete=models.PROTECT)
+    published = models.DateTimeField(auto_now_add=True, db_index=True, verbose_name="")
+
+    def __str__(self):
+        return f'id=:{self.id}, user:{self.user.full_name} book:{self.book.name} '
 
 
 class Receive(models.Model):
