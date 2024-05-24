@@ -1,10 +1,8 @@
-import requests
 from django.core.management.base import BaseCommand
 from applibrary.models import *
-from datetime import datetime
-import random
 import json
 from pathlib import Path
+
 
 class Command(BaseCommand):
     help = 'import books from json'

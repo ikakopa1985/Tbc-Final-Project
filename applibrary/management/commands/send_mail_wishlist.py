@@ -1,6 +1,5 @@
 from django.core.mail import EmailMessage
 from django.core.management.base import BaseCommand
-
 from Library.settings import EMAIL_HOST_USER
 from applibrary.models import *
 
