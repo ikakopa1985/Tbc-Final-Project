@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!token) {
         console.error('Token not found in local storage');
-        alert('please log in   and   then refresh page')
-        return;
+
     }
     else{
          apiRequest('/api/user-profile/', 'GET')
