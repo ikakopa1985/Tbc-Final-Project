@@ -29,7 +29,6 @@ router.register(r'wishlist', WishlistViewSet, basename='WishlistViewSet'),
 
 urlpatterns = [
     path('', include(router.urls)),
-    path("admin/", admin.site.urls),
     path("index/", index, name='index'),
     path("get10PopularBooks/", Get10PopularBooksView.as_view(), name='Get10PopularBooks'),
     path("getAllBookLease1Year/", GetAllBookLease1Year.as_view(), name='GetAllBookLease1Year'),
