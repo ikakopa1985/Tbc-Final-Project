@@ -3,44 +3,89 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!token) {
         console.error('Token not found in local storage');
-
-    }
-    else{
-         apiRequest('/api/user-profile/', 'GET')
+    } else {
+        apiRequest('/api/user-profile/', 'GET')
             .then(profileData => {
                 console.log('Authenticated!');
                 console.log('User Profile Data:', profileData);
                 document.getElementById('token').innerHTML =
                     document.getElementById('token').innerHTML +
-                    '           wellcome   '+
-                    '            \n    '+
+                    '           welcome   ' +
+                    '            \n    ' +
                     'email=' + profileData['email'] +
-                    '            \n    '+
+                    '            \n    ' +
                     'username= ' + profileData['username']
             });
     }
 
-    function apiRequest(url, method, data = null, tokenRequired = true) {
+    async function refreshAccessToken() {
+        const refreshToken = localStorage.getItem('refresh_token');
+        if (!refreshToken) {
+            console.error('Refresh token not found in local storage');
+            return null;
+        }
+
+        try {
+            const response = await fetch('/api/token/refresh/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ refresh: refreshToken })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                localStorage.setItem('token', data.access);
+                return data.access;
+            } else {
+                console.error('Failed to refresh access token:', response.statusText);
+                return null;
+            }
+        } catch (error) {
+            console.error('Error refreshing access token:', error);
+            return null;
+        }
+    }
+
+    async function apiRequest(url, method, data = null, tokenRequired = true) {
         const headers = { 'Content-Type': 'application/json' };
+        let token = localStorage.getItem('token');
+
         if (tokenRequired && token) {
             headers['Authorization'] = `Bearer ${token}`;
         }
 
-        return fetch(url, {
-            method: method,
-            headers: headers,
-            body: data ? JSON.stringify(data) : null
-        })
-        .then(response => {
+        try {
+            let response = await fetch(url, {
+                method: method,
+                headers: headers,
+                body: data ? JSON.stringify(data) : null
+            });
+
+            if (response.status === 401 && tokenRequired) { // If unauthorized, try to refresh the token
+                token = await refreshAccessToken();
+                if (token) {
+                    headers['Authorization'] = `Bearer ${token}`;
+                    response = await fetch(url, {
+                        method: method,
+                        headers: headers,
+                        body: data ? JSON.stringify(data) : null
+                    });
+                } else {
+                    throw new Error('Unable to refresh token');
+                }
+            }
+
             if (!response.ok) {
                 throw new Error(`Network response was not ok: ${response.statusText}`);
             }
+
             return response.json();
-        })
-        .catch(error => {
+        } catch (error) {
             console.error('There was a problem with your fetch operation:', error);
             throw error;
-        });
+        }
     }
 
     // Login form
@@ -52,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
         apiRequest('/api/token/', 'POST', { username, password }, false)
             .then(data => {
                 localStorage.setItem('token', data.access);
+                localStorage.setItem('refresh_token', data.refresh);
                 document.getElementById('token').innerHTML = `Token: ${data.access}`;
-                // const token = data.access
                 return apiRequest('/api/user-profile/', 'GET');
             })
             .then(profileData => {
@@ -61,12 +106,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log('User Profile Data:', profileData);
                 document.getElementById('token').innerHTML =
                     document.getElementById('token').innerHTML +
-                    '            \n    '+
+                    '            \n    ' +
                     'email=' + profileData['email'] +
-                    '            \n    '+
+                    '            \n    ' +
                     'username= ' + profileData['username']
             });
-         // window.location.reload();
     });
 
     // Get book by ID
@@ -128,9 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 
-
-    //create user
-
+    // Create user
     document.getElementById('userIdentForm').addEventListener('submit', async function(event) {
         event.preventDefault();
         const userData = {
@@ -169,8 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-
-     // Get get 10 Popular Books
+    // Get 10 Popular Books
     document.getElementById("get10PopularBooksBut").addEventListener("click", function () {
         apiRequest(`/get10PopularBooks`, 'GET')
             .then(data => {
@@ -178,8 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 
-
-    // get All Book Lease 1 Year
+    // Get All Book Lease 1 Year
     document.getElementById("getAllBookLease1YearBut").addEventListener("click", function () {
         console.log('clicked')
         apiRequest(`/getAllBookLease1Year`, 'GET')
@@ -188,8 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 
-
-    // get All Book Lease 1 Year
+    // Get 100 Book Most Overdue
     document.getElementById("get100BookMostOverdueBut").addEventListener("click", function () {
         console.log('clicked')
         apiRequest(`/get100BookMostOverdue`, 'GET')
@@ -198,8 +237,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 
-
-    // get100UserMostOverdueBut
+    // Get 100 User Most Overdue
     document.getElementById("get100UserMostOverdueBut").addEventListener("click", function () {
         console.log('clicked')
         apiRequest(`/get100UserMostOverdue`, 'GET')
@@ -208,8 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 
-
-    // getSortedBooksBut
+    // Get Sorted Books
     document.getElementById("getSortedBooksBut").addEventListener("click", function () {
         console.log('clicked')
         apiRequest(`/getSortedBooks`, 'GET')
@@ -218,21 +255,16 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 
+    // Add to Wishlist
+    document.getElementById('addtowishlistform').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const wishlistData = {
+            book: document.getElementById('bookidinput').value,
+        };
 
-
-    // addWishBookBut
-      document.getElementById('addtowishlistform').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const wishlistData = {
-                book: document.getElementById('bookidinput').value,
-            };
-
-            apiRequest('/wishlist/', 'POST', wishlistData)
-                .then(data => {
-                    document.getElementById('responseApi').innerHTML = JSON.stringify(data);
-                });
-        });
-
+        apiRequest('/wishlist/', 'POST', wishlistData)
+            .then(data => {
+                document.getElementById('responseApi').innerHTML = JSON.stringify(data);
+            });
+    });
 });
-
-
